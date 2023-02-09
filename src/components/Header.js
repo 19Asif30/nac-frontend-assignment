@@ -11,7 +11,6 @@ import HashIcon from "./img/Hash";
 import PlusIcon from "./img/Plus";
 import { shortId } from "./utils";
 import PropTypes from "prop-types";
-import id from "faker/lib/locales/id_ID";
 
 export default function Header({
   column: { id, created, label, dataType, getResizerProps, getHeaderProps },

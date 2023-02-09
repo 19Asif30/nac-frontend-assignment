@@ -9,6 +9,7 @@ import {
 import Cell from "./Cell";
 import Header from "./Header";
 import PlusIcon from "./img/Plus";
+import PropTypes from "prop-types";
 
 const defaultColumn = {
   minWidth: 50,
@@ -117,3 +118,10 @@ export default function Table({
     </>
   );
 }
+
+Table.propTypes = {
+  columns: PropTypes.array,
+  data: PropTypes.array,
+  dispatch: PropTypes.any,
+  skipReset: PropTypes.any,
+};

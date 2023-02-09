@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useReducer } from "react";
-import { tmpData } from "../TmpData";
 import makeData from "./makeData";
 import { reducer } from "./Reducer";
+import PropTypes from "prop-types";
 export const MyContext = createContext();
 
 const AppContext = ({ children }) => {
@@ -27,3 +27,7 @@ const AppContext = ({ children }) => {
 };
 
 export default AppContext;
+
+AppContext.propTypes = {
+  children: PropTypes.element,
+};
