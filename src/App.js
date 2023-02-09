@@ -30,7 +30,7 @@ function App() {
 
   useEffect(() => {
     if (state.data && post) {
-      //updateData();
+      updateData();
       setPost((prev) => !prev);
     }
   }, [post]);

@@ -49,7 +49,7 @@ export default function Cell({
     }
 
     if (value.update && value.value !== initialValue && initialValue) {
-      //handleUpdate(id, initialValue, value);
+      handleUpdate(id, initialValue, value);
     }
   }, [value, dataDispatch, id, index]);
 

@@ -20,7 +20,7 @@ const AppContext = ({ children }) => {
   const value = { state, dispatch };
 
   useEffect(() => {
-    //handleClick();
+    handleClick();
   }, []);
 
   return <MyContext.Provider value={value}>{children}</MyContext.Provider>;
