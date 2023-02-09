@@ -85,8 +85,12 @@ export default function Table({
         className={clsx("table", isTableResizing() && "noselect")}
       >
         <div>
-          {headerGroups.map((headerGroup) => (
-            <div {...headerGroup.getHeaderGroupProps()} className="tr">
+          {headerGroups.map((headerGroup, index) => (
+            <div
+              key={index}
+              {...headerGroup.getHeaderGroupProps()}
+              className="tr"
+            >
               {headerGroup.headers.map((column) => column.render("Header"))}
             </div>
           ))}
@@ -95,7 +99,7 @@ export default function Table({
           {rows.map((row, i) => {
             prepareRow(row);
             return (
-              <div {...row.getRowProps()} className="tr">
+              <div key={i} {...row.getRowProps()} className="tr">
                 {row.cells.map((cell) => (
                   <div {...cell.getCellProps()} className="td">
                     {cell.render("Cell")}

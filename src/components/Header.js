@@ -274,7 +274,11 @@ export default function Header({
                   }}
                 >
                   {types.map((type) => (
-                    <button className="sort-button" onClick={type.onClick}>
+                    <button
+                      key={type.label}
+                      className="sort-button"
+                      onClick={type.onClick}
+                    >
                       <span className="svg-icon svg-text icon-margin">
                         {type.icon}
                       </span>
@@ -293,6 +297,7 @@ export default function Header({
             >
               {buttons.map((button) => (
                 <button
+                  key={button.label}
                   type="button"
                   className="sort-button"
                   onMouseDown={button.onClick}
