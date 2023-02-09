@@ -10,6 +10,8 @@ import TextIcon from "./Text";
 import HashIcon from "./img/Hash";
 import PlusIcon from "./img/Plus";
 import { shortId } from "./utils";
+import PropTypes from "prop-types";
+import id from "faker/lib/locales/id_ID";
 
 export default function Header({
   column: { id, created, label, dataType, getResizerProps, getHeaderProps },
@@ -330,3 +332,9 @@ export default function Header({
     </div>
   );
 }
+
+Header.propTypes = {
+  column: PropTypes.object,
+  setSortBy: PropTypes.any,
+  dataDispatch: PropTypes.any,
+};

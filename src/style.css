@@ -218,6 +218,7 @@ html {
   border-right: 0;
 }
 
+
 .td:last-child {
   border-right: 0;
 }
@@ -303,3 +304,10 @@ html {
   border-radius: 7px;
   background-color: rgb(26, 245, 37);
 }
+
+.submit-button:hover{
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: #8ecae6;
+}
+
